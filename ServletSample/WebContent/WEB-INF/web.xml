@@ -9,4 +9,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>MyServletDemo</servlet-name>
+    <servlet-class>com.bridge.javaee.HelloWorld</servlet-class>
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>David</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServletDemo</servlet-name>
+    <url-pattern>/MyServletDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyServletDemo</servlet-name>
+    <url-pattern>/MyServletDemo.jsp</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  	<param-name>globalName</param-name>
+  	<param-value>any person</param-value>
+  </context-param>
 </web-app>
