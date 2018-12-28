@@ -25,8 +25,32 @@
     <servlet-name>MyServletDemo</servlet-name>
     <url-pattern>/MyServletDemo.jsp</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>DoPost</servlet-name>
+    <servlet-class>com.bridge.javaee.DoPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoPost</servlet-name>
+    <url-pattern>/doPost</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CookieDemo</servlet-name>
+    <servlet-class>com.bridge.javaee.CookieDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CookieDemo</servlet-name>
+    <url-pattern>/cookieDemo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LastVisitCookie</servlet-name>
+    <servlet-class>com.bridge.javaee.LastVisitCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LastVisitCookie</servlet-name>
+    <url-pattern>/lastVisit</url-pattern>
+  </servlet-mapping>
   <context-param>
-  	<param-name>globalName</param-name>
-  	<param-value>any person</param-value>
+    <param-name>globalName</param-name>
+    <param-value>any person</param-value>
   </context-param>
 </web-app>

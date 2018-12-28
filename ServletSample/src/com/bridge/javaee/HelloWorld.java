@@ -78,6 +78,19 @@ public class HelloWorld extends HttpServlet {
 		String strName = request.getParameter("name");
 		String strInitName = this.getInitParameter("name");
 		String strGlobalName = context.getInitParameter("globalName");
+		
+		String url = request.getRequestURL().toString();
+		String queryString = request.getQueryString();
+		String pathInfo = request.getPathInfo();
+		String remoteAddr = request.getRemoteAddr();
+		String remoteHost = request.getRemoteHost();
+		
+		int remotePort = request.getRemotePort();
+		String localAddr = request.getLocalAddr();
+		int localPort = request.getLocalPort();
+		String localName = request.getLocalName();
+		String referer = request.getHeader("Referer");
+		
 		String fileData = "";
 		
 
@@ -103,6 +116,9 @@ public class HelloWorld extends HttpServlet {
 		out.println("</head>");
 		out.println("<body>");
 		out.println("name: " + strName + ", config name:" + strConfigName + ",init param:" + strInitName + ",context my name:" + strContextMyName + ", global name:" + strGlobalName + ",file data:" + fileData);
+		out.println("url:" + url + ", queryString:" + queryString + ",pathinfo:" + pathInfo + ",remote addr:" + remoteAddr + ", remotehost:" + remoteHost + ",remote port" + remotePort);
+		out.println("local addr:" + localAddr + ", local name:" + localName + ", local port:" + localPort);
+		out.println("referer:" + referer);
 		out.println("</body>");
 		out.println("</html>");
 		out.flush();
